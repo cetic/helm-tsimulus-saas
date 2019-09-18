@@ -1,0 +1,41 @@
+# Default values for tsaas.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: ceticasbl/tsimulus-saas
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: NodePort
+  port: 8080
+
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: 
+      paths: []
+
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+env:
+  binding:
+    value: 0.0.0.0 
+resources:
+  requests:
+    memory: "250Mi"
+    cpu: "250m"
+  limits:
+    memory: "1000Mi"
+    cpu: "500m"
