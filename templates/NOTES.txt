@@ -1,10 +1,10 @@
 1. Get the application URL by running these commands:
 {{- if .Values.ingress.enabled }}
-{{- range $host := .Values.ingress.hosts }}
-  {{- range .paths }}
-  http{{ if $.Values.ingress.tls }}s{{ end }}://{{ $host.host }}{{ . }}
-  {{- end }}
-{{- end }}
+  http{{ if $.Values.ingress.tls }}s{{ end }}://{{ if $.Values.ingress.hosts }}{{.Values.ingress.hosts}}{{else}}your-cluster-ip{{end}}{{ $.Values.ingress.path }}
+  {{if not $.Values.ingress.hosts}}
+  Find out your cluster ip address by running:
+  $ kubectl cluster-info
+  {{ end }}
 {{- else if contains "NodePort" .Values.service.type }}
   export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace }} -o jsonpath="{.spec.ports[0].nodePort}" services {{ include "tsaas.fullname" . }})
   export NODE_IP=$(kubectl get nodes --namespace {{ .Release.Namespace }} -o jsonpath="{.items[0].status.addresses[0].address}")
