@@ -1,6 +1,6 @@
 name: tsaas
-version: 0.1.0
-appVersion: 0.1.0
+version: 0.1.1
+appVersion: 0.1.1
 description: A Helm chart for Tsimulus as a Service
 keywords:
   - tsimulus
@@ -9,5 +9,5 @@ home: https://github.com/cetic/tsimulus-saas
 source:
   - https://github.com/cetic/helm-chart
 maintainers:
-  - name: A
+  - name: AyadiAmen
   - name: alexnuttinck
