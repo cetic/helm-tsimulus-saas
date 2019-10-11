@@ -6,6 +6,7 @@ keywords:
   - tsimulus
   - generator
 home: https://github.com/cetic/tsimulus-saas
+icon: https://raw.githubusercontent.com/cetic/tsimulus-saas/master/doc/images/TSimulus-logo.png
 source:
   - https://github.com/cetic/helm-chart
 maintainers:
