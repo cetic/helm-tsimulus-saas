@@ -1,5 +1,5 @@
 ---
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: {{ include "tsaas.fullname" . }}
@@ -9,6 +9,7 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
+  serviceName: {{ include "tsaas.name" . }}
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
@@ -42,6 +43,6 @@ spec:
             limits:
               memory: {{ .Values.resources.limits.memory }}
               cpu: {{ .Values.resources.limits.cpu }}
-      livenessProbe:
-        tcpSocket:
-          port: 8080
+          livenessProbe:
+            tcpSocket:
+              port: 8080
