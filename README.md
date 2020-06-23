@@ -9,7 +9,7 @@ This [Helm](https://github.com/kubernetes/helm) chart installs [tsaas](https://g
 ## Prerequisites
 
 - Kubernetes cluster 1.10+
-- Helm 2.8.0+
+- Helm 3.0.0+
 - PV provisioner support in the underlying infrastructure.
 
 ## Installation
@@ -58,7 +58,7 @@ The following table lists the configurable parameters of the tsaas chart and the
 | `replicaCount`                                                              | Number of replica                                                                                                  | `1`                             |
 | **Image**                                                                   |
 | `image.repository`                                                          | tsaas Image name                                                                                                   | `ceticasbl/tsimulus-saas`       |
-| `image.tag`                                                                 | tsaas Image tag                                                                                                    | `latest`                        |
+| `image.tag`                                                                 | tsaas Image tag                                                                                                    | `0.1.17`                        |
 | `image.pullPolicy`                                                          | tsaas Image pull policy                                                                                            | `IfNotPresent`                  |
 | **Service**                                                                 |
 | `service.type`                                                              | Type of service for tsaas                                                                                          | `NodePort`                      |
