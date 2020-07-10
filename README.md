@@ -58,7 +58,7 @@ The following table lists the configurable parameters of the tsaas chart and the
 | `replicaCount`                                                              | Number of replica                                                                                                  | `1`                             |
 | **Image**                                                                   |
 | `image.repository`                                                          | tsaas Image name                                                                                                   | `ceticasbl/tsimulus-saas`       |
-| `image.tag`                                                                 | tsaas Image tag                                                                                                    | `0.1.17`                        |
+| `image.tag`                                                                 | tsaas Image tag                                                                                                    | `0.1.18`                        |
 | `image.pullPolicy`                                                          | tsaas Image pull policy                                                                                            | `IfNotPresent`                  |
 | **Service**                                                                 |
 | `service.type`                                                              | Type of service for tsaas                                                                                          | `NodePort`                      |

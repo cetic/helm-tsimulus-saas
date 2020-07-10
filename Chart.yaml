@@ -1,8 +1,8 @@
 ---
 apiVersion: v2
 name: tsaas
-version: 0.1.4
-appVersion: 0.1.7
+version: 0.1.5
+appVersion: 0.1.8
 description: A Helm chart for Tsimulus as a Service
 keywords:
   - tsimulus
