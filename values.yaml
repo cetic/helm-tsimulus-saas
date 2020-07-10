@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: ceticasbl/tsimulus-saas
-  tag: 0.1.17
+  tag: 0.1.18
   pullPolicy: IfNotPresent
 
 nameOverride: ""
